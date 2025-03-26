@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 import pyautogui
+from selenium.webdriver.common.action_chains import ActionChains
 
 # Ask user for the folder path
 pyautogui.alert("Please enter the path after clicking OK Button!")
@@ -15,7 +16,6 @@ if not folder_path:
 
 # Ensure directories exist
 screenshot_dir = os.path.join(folder_path, "screenshots")
-
 log_dir = os.path.join(folder_path, "logs")
 
 os.makedirs(screenshot_dir, exist_ok=True)
@@ -65,12 +65,11 @@ def take_screenshot_and_log(driver, test_case_name):
         # Locate the element
         element_xpath = """//*[@id="content"]/ul/li[7]/a"""  # Xpath of the element
         element_xpath2 = """//*[@id="hot-spot"]"""
-        element_xpath3 = """//*[@id="hot-spot"]"""
 
         try:
             element = driver.find_element(By.XPATH, element_xpath)
             highlight_element(driver, element)
-            time.sleep(1)  # Pause to ensure highlight is visible
+            time.sleep(1)
             screenshot_path = os.path.join(screenshot_dir, f"screenshot_{int(time.time())}.png")
             driver.save_screenshot(screenshot_path)
             logging.info(f"Screenshot saved at: {screenshot_path}")
@@ -89,10 +88,20 @@ def take_screenshot_and_log(driver, test_case_name):
         try:
             element = driver.find_element(By.XPATH, element_xpath2)
             highlight_element(driver, element)
-            time.sleep(1)
             screenshot_path = os.path.join(screenshot_dir, f"screenshot_{int(time.time())}.png")
             driver.save_screenshot(screenshot_path)
+            time.sleep(1)
+            actions = ActionChains(driver)
+            actions.context_click(element).perform()
+            time.sleep(2)
+            # Check and accept alert if present
+            alert = driver.switch_to.alert
+            print(f"Alert detected: {alert.text}")
+            alert.accept()
+            print("Alert accepted.")
             element.click()
+            time.sleep(2)
+            pyautogui.press('Enter')
             logging.info("Box Right Click Test Case Successful")
             print("Box Right Click Test Case Successful")
 
@@ -101,7 +110,31 @@ def take_screenshot_and_log(driver, test_case_name):
             failure_screenshot_path = os.path.join(screenshot_dir, f"Box_Right_Click_{timestamp}.png")
             driver.save_screenshot(failure_screenshot_path)
             logging.info(f"Failure screenshot saved at: {failure_screenshot_path}")
+            print("No alert found.")
             print("Box Right Click Test Case Failed")
+
+        try:
+            for _ in range(9):
+                pyautogui.press('down')
+                time.sleep(0.5)
+                print("Repetitive Task Successful")
+        except NoSuchElementException:
+            print("Repetitive Task Failed")
+
+        try:
+            pyautogui.press("Enter")
+            time.sleep(2)
+        except NoSuchElementException:
+            logging.error(f"Auto Click Event Failed")
+            failure_screenshot_path = os.path.join(screenshot_dir, f"Box_Right_Click_{timestamp}.png")
+            driver.save_screenshot(failure_screenshot_path)
+            logging.info(f"Failure screenshot saved at: {failure_screenshot_path}")
+            print("Auto Click Event Failed")
+
+        try:
+            pyautogui.alert("Test Execution Has Completed Please Press OK!")
+        except NoSuchElementException:
+            print("Alert is not working and has failed to close the browser")
 
     finally:
         logging.info("Test case execution completed.")
