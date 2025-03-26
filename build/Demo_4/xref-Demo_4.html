@@ -155,6 +155,7 @@ imports:
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#mss">mss</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#os">os</a>
@@ -182,6 +183,8 @@ imports:
  &#8226;   <a href="#sre_parse">sre_parse</a>
  &#8226;   <a href="#stat">stat</a>
  &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#warnings">warnings</a>
@@ -369,6 +372,8 @@ imported by:
  &#8226;   <a href="#importlib.resources.readers">importlib.resources.readers</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#pyautogui">pyautogui</a>
  &#8226;   <a href="#selectors">selectors</a>
@@ -3081,6 +3086,13 @@ imported by:
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.metadata._meta">importlib.metadata._meta</a>
  &#8226;   <a href="#importlib.resources.readers">importlib.resources.readers</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#packaging._elffile">packaging._elffile</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
@@ -4982,6 +4994,7 @@ imported by:
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#numbers">numbers</a>
  &#8226;   <a href="#os">os</a>
@@ -6873,6 +6886,7 @@ imported by:
  &#8226;   <a href="#importlib.resources._adapters">importlib.resources._adapters</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources.readers">importlib.resources.readers</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging._tokenizer">packaging._tokenizer</a>
  &#8226;   <a href="#pdb">pdb</a>
@@ -7028,7 +7042,6 @@ imports:
     <a href="#_ctypes">_ctypes</a>
  &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
- &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
  &#8226;   <a href="#nt">nt</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#struct">struct</a>
@@ -7048,6 +7061,9 @@ imported by:
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#platform">platform</a>
@@ -7201,6 +7217,8 @@ imported by:
  &#8226;   <a href="#_pyrepl._minimal_curses">_pyrepl._minimal_curses</a>
  &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
 
   </div>
 
@@ -7217,7 +7235,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#_pyrepl.windows_console">_pyrepl.windows_console</a>
- &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#pyautogui._pyautogui_win">pyautogui._pyautogui_win</a>
  &#8226;   <a href="#pygetwindow._pygetwindow_win">pygetwindow._pygetwindow_win</a>
  &#8226;   <a href="#pyperclip">pyperclip</a>
@@ -7332,6 +7350,7 @@ imported by:
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
  &#8226;   <a href="#plistlib">plistlib</a>
  &#8226;   <a href="#pyautogui">pyautogui</a>
  &#8226;   <a href="#pyscreeze">pyscreeze</a>
@@ -10635,6 +10654,7 @@ imported by:
  &#8226;   <a href="#setuptools.discovery">setuptools.discovery</a>
  &#8226;   <a href="#setuptools.glob">setuptools.glob</a>
  &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
  &#8226;   <a href="#unittest.loader">unittest.loader</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
@@ -12533,6 +12553,7 @@ imported by:
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#site">site</a>
  &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
 
   </div>
 
@@ -12765,6 +12786,260 @@ imports:
   <div class="import">
 imported by:
     <a href="#pyautogui">pyautogui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/__init__.py" type="text/plain"><tt>mss</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Demo_4.py">Demo_4.py</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.base"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/base.py" type="text/plain"><tt>mss.base</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#'collections.abc'">'collections.abc'</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#abc">abc</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.darwin"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/darwin.py" type="text/plain"><tt>mss.darwin</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.util">ctypes.util</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.exception"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/exception.py" type="text/plain"><tt>mss.exception</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.factory"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/factory.py" type="text/plain"><tt>mss.factory</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+ &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss">mss</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.linux"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/linux.py" type="text/plain"><tt>mss.linux</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.util">ctypes.util</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.models"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/models.py" type="text/plain"><tt>mss.models</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.screenshot"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/screenshot.py" type="text/plain"><tt>mss.screenshot</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#'collections.abc'">'collections.abc'</a>
+ &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.tools"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/tools.py" type="text/plain"><tt>mss.tools</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#zlib">zlib</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss.base">mss.base</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="mss.windows"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/site-packages/mss/windows.py" type="text/plain"><tt>mss.windows</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#mss">mss</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
 
   </div>
 
@@ -13872,6 +14147,8 @@ imported by:
  &#8226;   <a href="#lzma">lzma</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
@@ -14011,6 +14288,7 @@ imported by:
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#threading">threading</a>
  &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
  &#8226;   <a href="#unittest.loader">unittest.loader</a>
  &#8226;   <a href="#unittest.main">unittest.main</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
@@ -14516,6 +14794,7 @@ imported by:
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
  &#8226;   <a href="#importlib.resources.readers">importlib.resources.readers</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
  &#8226;   <a href="#packaging.metadata">packaging.metadata</a>
  &#8226;   <a href="#pathlib._abc">pathlib._abc</a>
  &#8226;   <a href="#pathlib._local">pathlib._local</a>
@@ -14808,6 +15087,8 @@ imports:
 imported by:
     <a href="#_pyrepl.unix_console">_pyrepl.unix_console</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
  &#8226;   <a href="#packaging.markers">packaging.markers</a>
  &#8226;   <a href="#packaging.tags">packaging.tags</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
@@ -23412,6 +23693,7 @@ imported by:
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
  &#8226;   <a href="#multiprocessing.shared_memory">multiprocessing.shared_memory</a>
@@ -23612,6 +23894,8 @@ imported by:
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
  &#8226;   <a href="#mouseinfo">mouseinfo</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#multiprocessing">multiprocessing</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
@@ -23984,6 +24268,9 @@ imported by:
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
  &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
@@ -24101,7 +24388,10 @@ imports:
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
@@ -24109,10 +24399,34 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#mouseinfo">mouseinfo</a>
+    <a href="#Demo_4.py">Demo_4.py</a>
+ &#8226;   <a href="#mouseinfo">mouseinfo</a>
  &#8226;   <a href="#pymsgbox">pymsgbox</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
+ &#8226;   <a href="#tkinter.dialog">tkinter.dialog</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+ &#8226;   <a href="#tkinter.simpledialog">tkinter.simpledialog</a>
  &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.commondialog"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/tkinter/commondialog.py" type="text/plain"><tt>tkinter.commondialog</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.filedialog">tkinter.filedialog</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
 
   </div>
 
@@ -24129,6 +24443,80 @@ imports:
   <div class="import">
 imported by:
     <a href="#tkinter">tkinter</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.dialog"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/tkinter/dialog.py" type="text/plain"><tt>tkinter.dialog</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tkinter.filedialog">tkinter.filedialog</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.filedialog"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/tkinter/filedialog.py" type="text/plain"><tt>tkinter.filedialog</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#fnmatch">fnmatch</a>
+ &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
+ &#8226;   <a href="#tkinter.dialog">tkinter.dialog</a>
+ &#8226;   <a href="#tkinter.simpledialog">tkinter.simpledialog</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Demo_4.py">Demo_4.py</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.messagebox"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/tkinter/messagebox.py" type="text/plain"><tt>tkinter.messagebox</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.simpledialog">tkinter.simpledialog</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.simpledialog"></a>
+  <a target="code" href="///C:/Users/Bacancy/AppData/Local/Programs/Python/Python313/Lib/tkinter/simpledialog.py" type="text/plain"><tt>tkinter.simpledialog</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tkinter.filedialog">tkinter.filedialog</a>
 
   </div>
 
@@ -24582,6 +24970,15 @@ imported by:
  &#8226;   <a href="#importlib.metadata._meta">importlib.metadata._meta</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
+ &#8226;   <a href="#mss.base">mss.base</a>
+ &#8226;   <a href="#mss.darwin">mss.darwin</a>
+ &#8226;   <a href="#mss.exception">mss.exception</a>
+ &#8226;   <a href="#mss.factory">mss.factory</a>
+ &#8226;   <a href="#mss.linux">mss.linux</a>
+ &#8226;   <a href="#mss.models">mss.models</a>
+ &#8226;   <a href="#mss.screenshot">mss.screenshot</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
+ &#8226;   <a href="#mss.windows">mss.windows</a>
  &#8226;   <a href="#packaging._elffile">packaging._elffile</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
@@ -27682,6 +28079,7 @@ imported by:
  &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#mss.tools">mss.tools</a>
  &#8226;   <a href="#setuptools._vendor.backports.tarfile">setuptools._vendor.backports.tarfile</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
