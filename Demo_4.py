@@ -15,6 +15,7 @@ if not folder_path:
 
 # Ensure directories exist
 screenshot_dir = os.path.join(folder_path, "screenshots")
+
 log_dir = os.path.join(folder_path, "logs")
 
 os.makedirs(screenshot_dir, exist_ok=True)
