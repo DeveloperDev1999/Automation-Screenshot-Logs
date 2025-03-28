@@ -30,11 +30,12 @@ class BasePage:
         self.driver.execute_script("arguments[0].style.border='3px solid red'", element)
 
 class Screencapture:
-    def __init__(self):
-        """Initialize the directory paths and ensure they exist."""
+    def __init__(self, test_name="General"):
+        """Initialize the directory paths for a specific test case."""
+        self.test_name = test_name
         self.folder_path = os.path.join(os.getcwd(), "Results")
-        self.screenshot_dir = os.path.join(self.folder_path, "screenshots")
-        os.makedirs(self.screenshot_dir, exist_ok=True)  # Create directories if they don’t exist
+        self.screenshot_dir = os.path.join(self.folder_path, "screenshots", self.test_name)
+        os.makedirs(self.screenshot_dir, exist_ok=True)  # Create test-specific directory if not exist
 
     def get_next_filename(self, base_name="Screenshot", extension=".png"):
         """Find the next available filename by incrementing a counter."""
@@ -42,9 +43,9 @@ class Screencapture:
         while True:
             screenshot_name = f"{base_name}_{counter}{extension}"
             screenshot_path = os.path.join(self.screenshot_dir, screenshot_name)
-            if not os.path.exists(screenshot_path):  # Check if file already exists
+            if not os.path.exists(screenshot_path):
                 return screenshot_path
-            counter += 1  # Increment the counter if the file exists
+            counter += 1
 
     def capture_screenshot(self, save_path):
         """Captures a screenshot and saves it to the specified path."""
@@ -53,9 +54,9 @@ class Screencapture:
 
     def screenshots(self):
         """Captures a screenshot and saves it with an auto-incremented filename."""
-        screenshot_path = self.get_next_filename()  # Get unique filename
-        self.capture_screenshot(screenshot_path)  # Save the screenshot
-        print(f"Screenshot saved at: {screenshot_path}")  # Log output
+        screenshot_path = self.get_next_filename()
+        self.capture_screenshot(screenshot_path)
+        print(f"Screenshot saved at: {screenshot_path}")
 
 class HomePage(BasePage):
     def __init__(self, driver):
@@ -67,6 +68,7 @@ class HomePage(BasePage):
         self.file_submit_button = (By.XPATH, "//*[@id=\"file-submit\"]")
 
     def navigate(self, url):
+        time.sleep(2)
         self.driver.get(url)
 
     def click_test_link(self):
@@ -135,7 +137,7 @@ class HomePage(BasePage):
             root.withdraw()
             file_path = filedialog.askopenfilename(title="Select a File to Upload")
             if not file_path:
-                file_path = r"C:\\Users\\Bacancy\\PycharmProjects\\Practice_1\\dummy.pdf"
+                file_path = r"C:\Users\Bacancy\PycharmProjects\Practice_1\Test_Execution/dummy.pdf"
                 logging.warning("No file selected. Using default file.")
             file_input = self.driver.find_element(*self.file_upload_input)
             self.highlight_element(file_input)

@@ -1,32 +1,32 @@
 import logging
 from selenium import webdriver
-from Controller import HomePage, Screencapture
+from Controller.Controller import HomePage, Screencapture
 
 def main():
     driver = webdriver.Chrome()
     driver.maximize_window()
     homepage = HomePage(driver)
 
-    screenshot_obj = Screencapture()
+    screenshot = Screencapture(test_name="Context_Click")  # Separate folder for this test
 
     homepage.navigate("https://the-internet.herokuapp.com/")
-    screenshot_obj.screenshots()
+    screenshot.screenshots()
     homepage.time_sleep2()
 
     homepage.click_test_link()
-    screenshot_obj.screenshots()
+    screenshot.screenshots()
     homepage.time_sleep2()
 
     homepage.right_click_context_menu()
-    screenshot_obj.screenshots()
+    screenshot.screenshots()
     homepage.time_sleep2()
 
     homepage.repetitive_task_click()
-    screenshot_obj.screenshots()
+    screenshot.screenshots()
     homepage.time_sleep2()
 
     homepage.click_event()
-    screenshot_obj.screenshots()
+    screenshot.screenshots()
     homepage.time_sleep2()
 
     logging.info("First Test Execution Completed Successfully.")
