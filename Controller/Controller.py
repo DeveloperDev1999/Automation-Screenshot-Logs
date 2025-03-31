@@ -66,6 +66,9 @@ class HomePage(BasePage):
         self.file_upload_page = (By.XPATH, "//*[@id=\"content\"]/ul/li[18]/a")
         self.file_upload_input = (By.XPATH, "//*[@id=\"file-upload\"]")
         self.file_submit_button = (By.XPATH, "//*[@id=\"file-submit\"]")
+        self.horizontal_click_locater = (By.XPATH, """// *[ @ id = \"content\"] / ul / li[24] / a""")
+        self.horizontal_slider_function = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
+        self.slider_call = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
 
     def navigate(self, url):
         time.sleep(2)
@@ -155,10 +158,52 @@ class HomePage(BasePage):
         except NoSuchElementException:
             logging.error("File Upload Submission Failed")
 
-    def alert(self):
+    def alert1(self):
         pyautogui.alert("First Test Scenario has completed, Press OK to to start next Test Scenario.")
+        self.driver.quit()
+
+    def alert2(self):
+        pyautogui.alert("Second Test Scenario has completed, Press OK to to start next Test Scenario.")
         self.driver.quit()
 
     def alert_end(self):
         pyautogui.alert("All Test Scenarios have been executed, Press OK to Close the Browser.")
         self.driver.quit()
+
+    def horizontal_click(self):
+        try:
+            pyautogui.press('End')
+            element = self.driver.find_element(*self.horizontal_click_locater)
+            self.highlight_element(element)
+            element.click()
+            logging.info("Horizontal Slider Page Loaded Successfully")
+        except NoSuchElementException:
+            logging.error("Horizontal Slider Page Load Has Failed")
+
+    def horizontal_function_down(self):
+        try:
+            sliding = self.driver.find_element(*self.slider_call)
+            self.highlight_element(sliding)
+            sliding.click()
+            for _ in range(10):
+                pyautogui.press('right')
+                time.sleep(0.2)
+                print("Right Slider Call Successful")
+            logging.info(f"Right Slider Call Successful")
+        except NoSuchElementException:
+            print("Right Slider Call Failed")
+            logging.error("Right Slider Call Failed")
+
+    def horizontal_function_up(self):
+        try:
+            sliding = self.driver.find_element(*self.slider_call)
+            self.highlight_element(sliding)
+            sliding.click()
+            for _ in range(10):
+                pyautogui.press('left')
+                time.sleep(0.2)
+                print("Right Slider Call Successful")
+            logging.info(f"Right Slider Call Successful")
+        except NoSuchElementException:
+            print("Right Slider Call Failed")
+            logging.error("Right Slider Call Failed")

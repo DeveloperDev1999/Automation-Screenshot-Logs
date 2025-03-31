@@ -33,7 +33,7 @@ def main():
     print("First Test Execution Completed Successfully.")
     print("Please Wait To Start Next Execution.")
 
-    homepage.alert()
+    homepage.alert1()
 
 if __name__ == "__main__":
     main()

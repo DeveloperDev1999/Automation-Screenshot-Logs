@@ -25,10 +25,11 @@ def main2():
     screenshot.screenshots()
     homepage.time_sleep2()
 
-    logging.info("Test Execution Completed Successfully.")
-    print("Test Execution Completed Successfully.")
+    logging.info("Second Test Execution Completed Successfully.")
+    print("Second Test Execution Completed Successfully.")
+    print("Please Wait To Start Next Execution.")
 
-    homepage.alert_end()
+    homepage.alert2()
 
 if __name__ == "__main__":
     main2()
