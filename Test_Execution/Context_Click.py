@@ -7,7 +7,7 @@ def main():
     driver.maximize_window()
     homepage = HomePage(driver)
 
-    screenshot = Screencapture(test_name="Context_Click")  # Separate folder for this test
+    screenshot = Screencapture(test_name="Context_Click")  # Separate folder for this to test
 
     homepage.navigate("https://the-internet.herokuapp.com/")
     screenshot.screenshots()
