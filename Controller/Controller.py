@@ -3,6 +3,7 @@ import time
 import logging
 import mss
 import pyautogui
+import sys
 import tkinter as tk
 from tkinter import filedialog
 from selenium.common.exceptions import NoSuchElementException
@@ -66,7 +67,7 @@ class HomePage(BasePage):
         self.file_upload_page = (By.XPATH, "//*[@id=\"content\"]/ul/li[18]/a")
         self.file_upload_input = (By.XPATH, "//*[@id=\"file-upload\"]")
         self.file_submit_button = (By.XPATH, "//*[@id=\"file-submit\"]")
-        self.horizontal_click_locater = (By.XPATH, """// *[ @ id = \"content\"] / ul / li[24] / a""")
+        self.horizontal_click_locater = (By.XPATH, "//*[@id=\"content\"]/ul/li[24]/a")
         self.horizontal_slider_function = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
         self.slider_call = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
 
@@ -141,7 +142,8 @@ class HomePage(BasePage):
             file_path = filedialog.askopenfilename(title="Select a File to Upload")
             if not file_path:
                 # file_path = r"C:\Users\Bacancy\PycharmProjects\Practice_1\Test_Execution/dummy.pdf"
-                file_path = os.path.join(os.path.dirname(__file__), 'PDF', 'dummy.pdf')
+                base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+                file_path = os.path.join(base_dir, 'PDF', 'dummy.pdf')
                 logging.warning("No file selected. Using default file.")
             file_input = self.driver.find_element(*self.file_upload_input)
             self.highlight_element(file_input)
