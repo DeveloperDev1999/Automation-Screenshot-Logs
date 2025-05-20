@@ -66,7 +66,7 @@ class HomePage(BasePage):
         self.file_upload_page = (By.XPATH, "//*[@id=\"content\"]/ul/li[18]/a")
         self.file_upload_input = (By.XPATH, "//*[@id=\"file-upload\"]")
         self.file_submit_button = (By.XPATH, "//*[@id=\"file-submit\"]")
-        self.horizontal_click_locater = (By.XPATH, """// *[ @ id = \"content\"] / ul / li[24] / a""")
+        self.horizontal_click_locater = (By.XPATH, "//*[@id =\"content\"]/ul/li[24]/a")
         self.horizontal_slider_function = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
         self.slider_call = (By.XPATH, "//*[@id=\"content\"]/div/div/input")
 
