@@ -3,8 +3,10 @@ import time
 import logging
 import mss
 import pyautogui
+import pygetwindow as gw
 import sys
 import tkinter as tk
+import ctypes
 from tkinter import filedialog
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
@@ -93,8 +95,34 @@ class HomePage(BasePage):
         except NoSuchElementException:
             logging.error("Right Click Context Menu Test Failed: Element Not Found")
 
+    # def run_as_admin(self):
+    #     if ctypes.windll.shell32.IsUserAnAdmin():
+    #         return True
+    #     else:
+    #         script = sys.argv[0]
+    #         params = ' '.join([script] + sys.argv[1:])
+    #         ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, params, None, 1)
+    #         sys.exit()
+
+    def block_input_for_seconds(seconds = 5):
+        try:
+            print(f"Blocking input for {seconds} seconds...")
+            ctypes.windll.user32.BlockInput(1)  #True
+            time.sleep(seconds)
+            ctypes.windll.user32.BlockInput(0)  #False
+            print("Input Unblocked!")
+            logging.info("Input Block Success")
+        except Exception as e:
+            print("Input Block Task Failed:", e)
+            logging.error("Input Block Task Failed")
+
     def repetitive_task_click(self):
         try:
+            chrome = [w for w in gw.getWindowsWithTitle('Chrome') if w.visible]
+            if chrome:
+                chrome[0].activate()
+                time.sleep(1)
+
             for _ in range(10):
                 pyautogui.press('down')
                 time.sleep(0.5)

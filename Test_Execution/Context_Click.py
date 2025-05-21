@@ -21,6 +21,7 @@ def main():
     screenshot.screenshots()
     homepage.time_sleep2()
 
+    homepage.block_input_for_seconds()
     homepage.repetitive_task_click()
     screenshot.screenshots()
     homepage.time_sleep2()
